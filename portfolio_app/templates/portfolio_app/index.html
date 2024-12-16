@@ -1,0 +1,25 @@
+{% extends 'portfolio_app/base.html' %}
+
+{% block title %}Portfólio{% endblock %}
+
+{% block content %}
+<h2>Portfólio</h2>
+
+<h3>Projetos</h3>
+<ul>
+    {% for projeto in projetos %}
+    <li>
+        <strong>{{ projeto.titulo }}</strong>: {{ projeto.descricao }}
+    </li>
+    {% endfor %}
+</ul>
+
+<h3>Experiências</h3>
+<ul>
+    {% for experiencia in experiencias %}
+    <li>
+        <strong>{{ experiencia.titulo }}</strong>: {{ experiencia.descricao }}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

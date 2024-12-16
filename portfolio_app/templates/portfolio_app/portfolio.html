@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Meu Portfólio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio_app/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Meu Portfólio</h1>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'portfolio' %}">Portfólio</a>
+            <a href="{% url 'contato' %}">Contato</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h2>Projetos Realizados</h2>
+        
+        <!-- Exemplo de listagem de projetos -->
+        {% for projeto in projetos %}
+            <div class="projeto">
+                <h3>{{ projeto.nome }}</h3>
+                <p>{{ projeto.descricao }}</p>
+                <a href="{{ projeto.url }}">Ver Projeto</a>
+            </div>
+        {% empty %}
+            <p>Não há projetos disponíveis no momento.</p>
+        {% endfor %}
+    </div>
+
+    <footer>
+        <p>&copy;Portfólio</p>
+    </footer>
+</body>
+</html>
