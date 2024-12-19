@@ -1,6 +1,6 @@
 #  Portfólio feito em Django
 
-Este é o meu portfólio desenvolvido com Django. Ele exibe informações sobre experiência, habilidades e projetos do usuarios.
+Este é um portfólio desenvolvido com Django. Ele exibe informações sobre experiência, habilidades e projetos do usuarios.
 
 ## Tecnologias Usadas
 
